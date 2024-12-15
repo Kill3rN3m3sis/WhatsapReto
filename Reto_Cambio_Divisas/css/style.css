@@ -61,6 +61,10 @@ div {
     
 }
 
+.btn:hover {
+    background-color: #f5ce52;
+}
+
 .moneda {
     padding: 10px 0;
     display: flex;
