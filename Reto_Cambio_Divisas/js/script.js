@@ -1,3 +1,14 @@
+//validation to avoid negative numbers
+const input = document.getElementById('cantidad_uno');
+
+input.addEventListener('input', function(){
+    if(this.value < 0) {
+        this.value = 0;
+    }
+
+});
+
+
 const monedaEl_one = document.getElementById('moneda_uno');
 const monedaEl_two = document.getElementById('moneda_dos');
 const cantidadEl_one = document.getElementById('cantidad_uno');
