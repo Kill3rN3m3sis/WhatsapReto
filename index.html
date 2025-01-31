@@ -57,7 +57,7 @@
                     </li>
                     <li>
                         <a href="#" class="nav-item">
-                            <i class=""></i> <!--No se encontro imagen de Grok-->
+                            <i class="fa-brands fa-x-twitter"></i> <!--No se encontro icono similar de Grok-->
                             <span>Grok</span>
                         </a>
                     </li>
@@ -104,7 +104,9 @@
                         </a>
                     </li>
                     <li>
-                        <button class="post-button">Postear</button>
+                        <button class="post-button">
+                            <span>Postear</span>                            
+                        </button>
                     </li>
                 </ul>
                 
@@ -119,12 +121,44 @@
         <!-- ========== NAVEGACION CONTENIDO PRINCIPAL ========== -->
 
         <main class="main-content">
-            <!-- Área para crear una nueva publicación -->
-            <section class="create-post">
-                <img src="user-profile.jpg" class="post-profile-pic" alt="Foto de usuario">
-                <textarea placeholder="¡¿Qué está pasando?!" rows="3"></textarea>
+
+             <!-- Pestañas superiores "Para ti" y "Siguiendo" -->
+            <nav class="content-tabs">
+                <a href="#" class="tab active">Para ti</a>
+                <a href="#" class="tab">Siguiendo</a>
+            </nav>
+
+            <!--Publicar post personal-->
+            <section class="create-post">              
+
+                 <div class="post-editor">
+                    <img src="user-profile.jpg" class="post-profile-pic" alt="Foto de usuario">
+                    <textarea placeholder="¡¿Qué está pasando?!" maxlength="280"></textarea>
+                </div>
+
                 <div class="post-actions">
-                    <button>Publicar</button>
+                    <div class="media-icons"> <!--Iconos imagen, gif -->
+                        <button type="button">
+                            <i class="fa-regular fa-image"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-regular fa-calendar"></i>
+                        </button>
+                        <button type="button">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                    <button class="publish-button">Publicar</button>
+                    
                 </div>
             </section>
 
