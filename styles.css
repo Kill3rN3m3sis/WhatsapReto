@@ -87,6 +87,8 @@ body {
     background-color: rgba(29, 161, 242, 0.1);
 } 
 
+
+
 /* Componente: botón de Postear */
 .post-button {
     background-color: black;
@@ -110,6 +112,37 @@ body {
     border-radius: 10px;
 }
 
+
+/*Pestañas superiores "Para ti" y "Siguiendo"*/
+
+.content-tabs {
+    display: flex;
+    border-bottom: 1px solid #e6ecf0;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    color: #657786;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.tab.active {
+    color: #1da1f2;
+    border-bottom: 2px solid #1da1f2;
+}
+
+.tab:hover {
+    background: #bdbebe;
+}
+
+
+/*Creacion publicaciones*/
+
 .create-post textarea {
     width: 100%;
     padding: 10px;
@@ -117,6 +150,7 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     resize: none;
+    height: auto;
 }
 
 .create-post button {
@@ -158,8 +192,100 @@ body {
     margin-right: 10px;
 }
 
+.create-post {
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6ecf0;
+}
 
-/* Estilos para contenido multimedia en posts */
+.media-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.media-icons button {
+    background: none;
+    border: none;
+    color: #1da1f2;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.2rem;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+.media-icons button:hover {
+    background: #bdbebe;
+}
+
+.publish-button {
+    background: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.publish-button:hover {
+    background: #1991db;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+/* CSS para integrar la imagen de usuario dentro del textarea */
+.post-editor {
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Alinea elementos al inicio */
+    gap: 15px;
+    margin-left: 55px; /* Espacio equivalente al ancho de la imagen + gap */
+}
+
+.post-profile-pic {
+    position: absolute;
+    left: -55px; /* Mueve la imagen fuera del flujo normal */
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 3px; /* Ajuste de alineación vertical */
+}
+
+.create-post textarea {
+    width: 100%;
+    padding: 10px 40px 10px; /* Quitamos padding izquierdo */
+    border: none;
+    font-size: 16px;
+    resize: none;
+    min-height: 100px;
+    margin-left: -40px; /* Compensa el posicionamiento absoluto */ 
+    line-height: 1.5; /* Mejor interlineado para alinear texto */
+    padding-top: 12px; /* Alineación vertical precisa */   
+}
+
+.create-post textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.create-post textarea::placeholder {
+    color: #657786;
+    position: relative;
+    left: 0;
+}
+
+
+/* Estilos para contenido multimedia en publicaciones de terceros */
 .post-media {
     margin: 15px 0;
     border-radius: 16px;
@@ -506,14 +632,14 @@ body {
         position: relative;
     }
 
+    /*Oculta texto */
+    .post-button span {
+        display: none;
+    }
+
     .post-button::after {
         content: "+";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 1.2rem;
+        font-size: 24px;
     }
 
     /* Ajustes contenido principal */
@@ -523,6 +649,7 @@ body {
     }
 
     /* Barra lateral derecha compacta */
+    
     .sidebar-right {
         padding: 15px;
     }
@@ -589,8 +716,8 @@ body {
         height: 35px;
     }
 
-    /* Botón de postear como ícono */
-    .post-button {
+     /* Botón de postear como ícono */
+     .post-button {
         width: 40px;
         height: 40px;
         padding: 0;
@@ -598,19 +725,16 @@ body {
         position: relative;
     }
 
-    .post-button::after {
-        content: "+";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 1.2rem;
-    }
-
+    /*Oculta texto */
     .post-button span {
         display: none;
     }
+
+    .post-button::after {
+        content: "+";
+        font-size: 24px;
+    }
+   
 
     /* Ajustes contenido principal */
     .main-content {
@@ -698,13 +822,20 @@ body {
         border-radius: 50%;
         padding: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        
     }
 
+   
+
+    /* Oculta el texto en móviles */
+   
     .post-button::after {
         content: "+";
         font-size: 24px;
         line-height: 56px;
     }
+
+     
 
     /* Contenido principal ajustado */
     .main-content {
@@ -730,6 +861,5 @@ body {
         width: 40px;
         height: 40px;
     }
-
     
 }
