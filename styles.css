@@ -1,0 +1,408 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Contenedor principal */
+#app {
+    display: grid;
+    grid-template-columns: 250px auto 400px;
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+
+
+/* Barra lateral izquierda */
+.sidebar-left {
+    background-color: #ffffff;
+    border-right: 1px solid #e6ecf0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar-left .logo {
+    margin-bottom: 20px;
+}
+
+
+.sidebar-left .main-navigation ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.sidebar-left .main-navigation li {
+    margin-bottom: 15px;
+    
+}
+
+.sidebar-left .main-navigation a {
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar-left .profile-summary {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-left .profile-summary .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-item:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+} 
+
+/* Componente: botón de Postear */
+.post-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 9999px; /* Valor alto para forma ovalada*/
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e6ecf0;
+    border-radius: 10px;
+}
+
+.create-post textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd6dd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.create-post button {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.feed .post {
+    border-bottom: 1px solid #e6ecf0;
+    padding: 20px 0;
+}
+
+.feed .post:last-child {
+    border-bottom: none;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-footer button {
+    background: none;
+    border: none;
+    color: #1da1f2;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+
+/* Barra lateral derecha */
+
+.sidebar-right {
+    background-color: #ffffff;
+    border-left: 1px solid #bdbebe;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* Barra busqueda */
+.search-bar {
+    padding: 12px;
+    border-radius: 9999px;
+    border: 1px solid #b4b5b6;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+/* Trending */
+.trending {
+    background-color: #f7f9fa;
+    border-radius: 9999px;
+    border: 1px solid #e6ecf0;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 20px /* Espacio encima del section */
+}
+
+.trending button {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.trending h2 {
+    margin-bottom: 10px;
+}
+
+.trending ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trending li {
+    margin-bottom: 10px;
+}
+
+.trending a {
+    text-decoration: none;
+    color: #1da1f2;
+    font-weight: bold;
+}
+
+
+/*Qué está pasando*/
+.sidebar {
+    background: #16181c;
+    border-radius: 16px;
+    padding: 12px;
+    max-width: 350px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sidebar h2 {
+    margin: 0;
+    padding: 12px;
+    font-size: 20px;
+    border-bottom: 1px solid #2f3336;
+}
+
+.trend-item {
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.trend-item:hover {
+    background: #e2e4e4;
+}
+
+.trend-info {
+    flex-grow: 1;
+}
+
+.category {
+    color: #71767b;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.trend-name {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.posts-count {
+    color: #71767b;
+    font-size: 13px;
+}
+
+.more-options {
+    color: #71767b;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.more-options:hover {
+    background: #1d9bf01a;
+    color: #1d9bf0;
+}
+
+.show-more {
+    color: #1d9bf0;
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.show-more:hover {
+    background: #0c0c0c;
+}
+
+
+/*A quíen seguir*/
+.who-to-follow {
+    margin-top: 20px;
+    background: #f7f9fa;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.who-to-follow h2 {
+    margin: 0;
+    padding: 12px;
+    font-size: 20px;
+    border-bottom: 1px solid #2f3336;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    transition: background 0.2s;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.user-item:hover {
+    background: #1d1f23;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+
+.user-handle {
+    font-size: 13px;
+    color: #71767b;
+}
+
+.follow-button {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.follow-button:hover {
+    background: #e6e6e6;
+}
+
+
+.follow-button:hover {
+    background: #1d9bf01a;
+    border-color: #1d9bf0;
+    color: #1d9bf0;
+}
+
+
+/*Footer panel derecho*/
+
+.sidebar-footer {
+    padding: 16px 12px 0 12px;
+    color: #71767b;
+    font-size: 13px;
+    line-height: 1.5;
+    border-top: 1px solid #2f3336;
+    margin-top: 12px;
+}
+
+.sidebar-footer p {
+    margin: 0 0 8px 0;
+}
+
+.footer-links a {
+    color: #71767b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #1d9bf0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    #app {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-left, .sidebar-right {
+        display: none;
+    }
+}

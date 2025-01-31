@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Título de la página-->
+    <title>Clon X | Twitter</title>
+
+    <!--Hoja de estilos principal-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--=====Iconos de Font Awesome (CND)=====-->
+    <!--Biblioteca de iconos vectoriales para reducir las solicitudes HTTP-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">"
+
+</head>
+
+<body>
+    <!-- ========== NAVEGACION BARRA LATERAL IZQUIERDA ========== -->
+     <!-- Contiene los principales enlaces de navegación-->
+    <div id="app">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-hashtag"></i>
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="far fa-bell"></i>
+                            <span> Notificaciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Mensajes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class=""></i>
+                            <span>Grok</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-bookmark"></i>
+                            <span>Guardados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Trabajos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>Comunidades</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span>Premium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                            <span>Empresa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <span>Más opciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <button class="post-button">Postear</button>
+                    </li>
+                
+                </ul>
+                
+            </nav>
+            <div class="profile-summary">
+                <img src="user-profile.jpg" alt="Foto de perfil" class="profile-pic">
+                <span>@usuario</span>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <!-- Área para crear una nueva publicación -->
+            <section class="create-post">
+                <img src="user-profile.jpg" class="post-profile-pic" alt="Foto de usuario">
+                <textarea placeholder="¡¿Qué está pasando?!" rows="3"></textarea>
+                <div class="post-actions">
+                    <button>Publicar</button>
+                </div>
+            </section>
+
+            <!-- Feed de publicaciones -->
+            <section class="feed">
+                <article class="post">
+                    <header class="post-header">
+                        <img src="https://picsum.photos/50" class="post-profile-pic" alt="Foto de usuario">
+                        <div class="post-user-info">
+                            <h3>Nombre de Usuario</h3>
+                            <span>@usuario · 2h</span>
+                        </div>
+                    </header>
+                    <p>Este es un ejemplo de publicación en X. 🚀</p>
+                    <footer class="post-footer">
+                        <button aria-label="Comentar"><i class="far fa-comment"></i></button> 
+                            <span>253</span>
+                        <button aria-label="Retweetear"><i class="fa-solid fa-retweet"></i></button>
+                            <span>1mil</span>
+                        <button aria-label="Me gusta"><i class="fa-regular fa-heart"></i></button>
+                            <span>4mil</span>
+                    </footer>
+                </article>
+                <!-- Agregar más publicaciones -->
+
+            </section>
+        </main>
+
+     <!-- ========== BARRA LATERAL DERECHA ========== -->
+     <!-- Barra lateral con buscador y trending topics -->
+        <aside class="sidebar-right">
+
+            <!-- Campo de busqueda -->
+            <input type="text" class="search-bar" placeholder="Buscar" aria-label="Campo de búsqueda">
+            
+
+            <div class="trending">
+                <h3>Suscríbete a Premium</h3>
+                    <p>
+                        Suscríbete para desbloquear nuevas funciones y, si eres elegible, recibir un pago de cuota de ingresos.
+                    </p>
+                    <div class="post-actions">
+                        <button>Suscribirse</button>
+                    </div>
+            </div>
+         
+            <div class="trending">
+                <h2>Qué está pasando</h2>
+                
+                <div class="trend-item">
+                    <div class="trend-info">
+                        <div class="category">Tendencia en España</div>
+                        <div class="trend-name">#NuevoSingle</div>
+                        <div class="posts-count">15.4 mil publicaciones</div>
+                    </div>
+                    <i class="fas fa-ellipsis-h more-options"></i>
+                </div>
+        
+                <div class="trend-item">
+                    <div class="trend-info">
+                        <div class="category">Deportes · Tendencia</div>
+                        <div class="trend-name">Champions League</div>
+                        <div class="posts-count">32.1 mil publicaciones</div>
+                    </div>
+                    <i class="fas fa-ellipsis-h more-options"></i>
+                </div>
+        
+                <div class="trend-item">
+                    <div class="trend-info">
+                        <div class="category">Política</div>
+                        <div class="trend-name">Elecciones 2024</div>
+                        <div class="posts-count">8.9 mil publicaciones</div>
+                    </div>
+                    <i class="fas fa-ellipsis-h more-options"></i>
+                </div>
+        
+                <a href="#" class="show-more">Mostrar más</a>
+
+                <!--A quíen seguir-->
+
+                <div class="who-to-follow">
+                    <h2>A quién seguir</h2>
+                    
+                    <div class="user-item">
+                        <img src="https://picsum.photos/50" alt="Usuario 1" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Ada Wong</div>
+                            <div class="user-handle">@adalove</div>
+                        </div>
+                        <button class="follow-button">Seguir</button>
+                    </div>
+                
+                    <div class="user-item">
+                        <img src="https://picsum.photos/51" alt="Usuario 2" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Leon S. Kennedy</div>
+                            <div class="user-handle">@turingmachine</div>
+                        </div>
+                        <button class="follow-button">Seguir</button>
+                    </div>
+                
+                    <div class="user-item">
+                        <img src="https://picsum.photos/52" alt="Usuario 3" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">Jill Valentine</div>
+                            <div class="user-handle">@amazinggrace</div>
+                        </div>
+                        <button class="follow-button">Seguir</button>
+                    </div>
+                
+                    <a href="#" class="show-more">Mostrar más</a>
+                </div>
+
+
+                <div class="sidebar-footer">                    
+                    <div class="footer-links">
+                        <a href="#">Condiciones de Servicio</a>
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Política de Cookies</a>
+                        <a href="#">Accesibilidad</a>
+                        <a href="#">Información de anuncios</a>
+                        <a href="#">Más opciones...</a>
+                    </div>
+                    <p>© 2025 X Corp.</p>
+                </div>
+        </aside>
+    </div>
+</body>
+</html>
