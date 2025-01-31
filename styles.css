@@ -31,7 +31,8 @@ body {
 
 
 
-/* Barra lateral izquierda */
+/* BARRA LATERAL IZQUIERDA */
+
 .sidebar-left {
     background-color: #ffffff;
     border-right: 1px solid #e6ecf0;
@@ -99,7 +100,9 @@ body {
     margin-top: 1rem;
 }
 
-/* Contenido principal */
+
+
+/* CONTENIDO PRINCIPAL */
 .main-content {
     padding: 20px;
     background-color: #ffffff;
@@ -156,8 +159,54 @@ body {
 }
 
 
+/* Estilos para contenido multimedia en posts */
+.post-media {
+    margin: 15px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e6ecf0;
+    max-width: 600px;
+}
 
-/* Barra lateral derecha */
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.post-image:hover {
+    opacity: 0.9;
+}
+
+
+
+
+/* Ajustes responsive para imagenes */
+/* Mejora el espaciado en los posts */
+
+.post {
+    padding: 15px 0;
+    border-bottom: 1px solid #e6ecf0;
+    transition: background 0.2s ease;
+}
+
+.post:hover {
+    background: #f8f9fa;
+}
+
+/* Ajusta el texto del post */
+.post p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #0f1419;
+}
+
+
+
+
+/* BARRA LATERAL DERECHA */
 
 .sidebar-right {
     background-color: #ffffff;
@@ -218,7 +267,8 @@ body {
 }
 
 
-/*Qué está pasando*/
+/*Apartado -Qué está pasando*/
+
 .sidebar {
     background: #16181c;
     border-radius: 16px;
@@ -295,7 +345,8 @@ body {
 }
 
 
-/*A quíen seguir*/
+/*Apartado - A quíen seguir*/
+
 .who-to-follow {
     margin-top: 20px;
     background: #f7f9fa;
@@ -307,7 +358,7 @@ body {
     margin: 0;
     padding: 12px;
     font-size: 20px;
-    border-bottom: 1px solid #2f3336;
+    border-bottom: 1px solid #727374;
 }
 
 .user-item {
@@ -320,7 +371,7 @@ body {
 }
 
 .user-item:hover {
-    background: #1d1f23;
+    background: #dfdfe0;
 }
 
 .user-avatar {
@@ -396,13 +447,289 @@ body {
 
 
 
-/* Responsive */
-@media (max-width: 768px) {
+/* RESPONSIVE */
+
+
+/* ... RESPONSIVE TABLETAS (IPAD PRO ...) */
+@media (min-width: 1000px) and (max-width: 1024px) {
     #app {
-        grid-template-columns: 1fr;
+        grid-template-columns: 60px 1fr 300px;
+        grid-gap: 15px;
+        max-width: 100%;
+        padding: 15px;
     }
 
-    .sidebar-left, .sidebar-right {
+    /* Barra lateral izquierda compacta */
+    .sidebar-left {
+        width: 60px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .sidebar-left .nav-item span {
         display: none;
     }
+
+    .sidebar-left .nav-item {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .sidebar-left .logo i {
+        font-size: 1.5rem;
+    }
+
+    /* Perfil compacto */
+    .profile-summary {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .profile-summary span,
+    .profile-summary i {
+        display: none;
+    }
+
+    .profile-summary img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    /* Botón de postear como icono */
+    .post-button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .post-button::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes contenido principal */
+    .main-content {
+        padding: 15px;
+        margin-right: 0;
+    }
+
+    /* Barra lateral derecha compacta */
+    .sidebar-right {
+        padding: 15px;
+    }
+
+    .trending {
+        padding: 1rem;
+    }
+
+    .who-to-follow .user-name {
+        font-size: 14px;
+    }
+
+    .follow-button {
+        padding: 6px 12px;
+    }
+}
+
+
+
+/* ... RESPONSIVE TABLETAS ... */
+
+@media (max-width: 912px) {
+    #app {
+        grid-template-columns: 60px 1fr; /* Columna izquierda fija y contenido principal flexible */
+        grid-template-areas: "sidebar-left main-content";
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+
+    /* Ajustes barra lateral izquierda */
+    .sidebar-left {
+        width: 60px;
+        padding: 10px;
+        align-items: center;
+        border-right: none;
+    }
+
+    .sidebar-left .nav-item span {
+        display: none; /* Oculta los textos */
+    }
+
+    .sidebar-left .nav-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar-left .logo i {
+        font-size: 1.5rem; /* Reduce tamaño del logo */
+    }
+
+    /* Perfil solo muestra imagen */
+    .profile-summary span,
+    .profile-summary i {
+        display: none;
+    }
+
+    .profile-summary img {
+        margin: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Botón de postear como ícono */
+    .post-button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .post-button::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .post-button span {
+        display: none;
+    }
+
+    /* Ajustes contenido principal */
+    .main-content {
+        border: none;
+        padding: 10px;
+        margin-right: 5px;
+    }
+
+    .create-post {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .create-post textarea {
+        margin-left: 10px;
+    }
+}
+
+
+/* ... RESPONSIVE CELULARES ... */
+
+@media (max-width: 430px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        height: 100vh;
+    }
+
+    /* Barra lateral izquierda convertida en navegación inferior */
+    .sidebar-left {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        top: auto !important;
+        flex-direction: row;
+        padding: 0 10px;
+        border-top: 1px solid #e6ecf0;
+        background: white;
+        z-index: 1000;
+        justify-content: space-around;
+    }
+
+    .sidebar-left .main-navigation {
+        width: 100%;
+    }
+
+    .sidebar-left .main-navigation ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+    }
+
+    .sidebar-left .main-navigation li {
+        margin: 0;
+    }
+
+    .sidebar-left .main-navigation a {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .sidebar-left .nav-item span {
+        display: none;
+    }
+
+    /* Ocultar elementos no necesarios en móvil */
+    .sidebar-left .logo,
+    .sidebar-left .profile-summary,
+    .sidebar-left .post-button span {
+        display: none;
+    }
+
+    /* Botón de postear flotante */
+    .post-button {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        padding: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .post-button::after {
+        content: "+";
+        font-size: 24px;
+        line-height: 56px;
+    }
+
+    /* Contenido principal ajustado */
+    .main-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px 15px 80px; /* Padding inferior para evitar overlap */
+        border: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Ocultar barra derecha */
+    .sidebar-right {
+        display: none;
+    }
+
+    /* Ajustes para el área de creación de posts */
+    .create-post {
+        padding-bottom: 10px;
+    }
+
+    .create-post img {
+        width: 40px;
+        height: 40px;
+    }
+
+    
 }
